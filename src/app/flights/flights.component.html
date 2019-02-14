@@ -1,0 +1,16 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Flight Number</th>
+        <th>Flight Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let flight of flights">
+        <td>{{ flight.flightNumber}}</td>
+        <td>{{flight.flightName}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
