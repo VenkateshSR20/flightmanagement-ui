@@ -1,0 +1,21 @@
+<div [hidden]="submitted" style="width: 300px;">
+  <table>
+    <thead>
+      <tr>
+        <th>User Number</th>
+        <th>User Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users"><!--user is a temporary variable and users is a list of users-->
+        <td>{{user.userId}}</td>
+        <td>{{user.userName}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <button class="btn btn-success" (click)="newCustomer()">Submit</button>
+</div>

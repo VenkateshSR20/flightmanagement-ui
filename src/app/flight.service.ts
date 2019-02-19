@@ -12,5 +12,17 @@ export class FlightService {
   getFlights(){
     return this.http.get('http://localhost:8080/flight/');
   }
+  getUsers(){
+    return this.http.get('http://localhost:8080/user/');
+  }
   //getBooking, getCancelling - no need of new service
+  getBooking(){
+    return this.http.get('http://localhost:8080/getBooking/');
+  }
+  getCancelling(){
+    return this.http.get('http://localhost:8080/getCancelling/');
+  }
+  createUser(){
+    return this.http.get('http://localhost:8080/userCreate');
+  }
 }
