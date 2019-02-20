@@ -25,4 +25,7 @@ export class FlightService {
   createUser(user){
     return this.http.post('http://localhost:8080/user/create',user);
   }
+  createFlight(flight){
+    return this.http.post('http://localhost:8080/flight/create',flight);
+  }
 }

@@ -9,14 +9,36 @@ import { FlightService } from '../flight.service';
 })
 export class FlightsComponent implements OnInit {
   flights : any = [];
+  flight : any={flightName:null};
+  submitted = false;
   constructor(private flightService:FlightService) { }
 
   ngOnInit() {
+    //this.flightService.getFlights().subscribe(
+      //(res) => {
+        //console.log(res)
+        //this.flights = res;
+      //});
+      this.getFlight();
+  }
+
+  getFlight(){
     this.flightService.getFlights().subscribe(
       (res) => {
         console.log(res)
         this.flights = res;
       });
+  }
+  
+  save() {
+    this.flightService.createFlight(this.flight)
+      .subscribe(data => this.getFlight(), error => console.log(error));
+
+  }
+
+  onsubmit() {
+    this.submitted = true;
+    this.save();
   }
 
 }
