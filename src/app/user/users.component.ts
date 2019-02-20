@@ -10,21 +10,26 @@ import { FlightService } from '../flight.service';
 })
 export class UsersComponent implements OnInit {
   users : any = [];
+  user : any ={userName:null};
   submitted = false;
   constructor(private userService:FlightService) { }
 
   ngOnInit() {
+    this.getUser();
+  }
+
+  getUser(){
     this.userService.getUsers().subscribe(
       (res) => {
         console.log(res)
         this.users = res;
       });
   }
-
   save() {
-    this.userService.createUser()
-      .subscribe(data => console.log(data), error => console.log(error));
-    this.users = new this.users();
+    //console.log(this.user)
+    this.userService.createUser(this.user)
+      .subscribe(data => this.getUser(), error => console.log(error));
+   // this.users = new this.users();
   }
 
   onSubmit() {
