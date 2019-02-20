@@ -25,6 +25,7 @@ export class UsersComponent implements OnInit {
         this.users = res;
       });
   }
+  
   save() {
     //console.log(this.user)
     this.userService.createUser(this.user)

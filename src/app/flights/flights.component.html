@@ -14,3 +14,15 @@
     </tbody>
   </table>
 </div>
+Flightname:<br>
+<form novalidate>
+  <input type="input" name="flightName" [(ngModel)]="flight.flightName">
+  <br><br>
+  Flightnumber:<br>
+  <input type="input" name="flightNumber" [(ngModel)]="flight.flightNumber">
+  <br><br>
+<input type="submit" value="Submit" (click)="onSubmit()">
+</form>
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>
