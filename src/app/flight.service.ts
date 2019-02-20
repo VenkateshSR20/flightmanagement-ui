@@ -22,7 +22,7 @@ export class FlightService {
   getCancelling(){
     return this.http.get('http://localhost:8080/getCancelling/');
   }
-  createUser(){
-    return this.http.get('http://localhost:8080/userCreate');
+  createUser(user){
+    return this.http.post('http://localhost:8080/user/create',user);
   }
 }
