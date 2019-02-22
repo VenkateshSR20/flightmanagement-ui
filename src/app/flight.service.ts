@@ -28,4 +28,7 @@ export class FlightService {
   createFlight(flight){
     return this.http.post('http://localhost:8080/flight/create',flight);
   }
+  saveBooking(booking,isBooking){
+    return this.http.post('http://localhost:8080/booking/save/'+isBooking,booking);
+  }
 }

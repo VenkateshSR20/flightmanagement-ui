@@ -1,0 +1,23 @@
+<form>
+    Select a user:
+    <select [(ngModel)]="booking.userEntity.userId" name="user">
+      <option value="65">VenkateshSR</option>
+    </select>
+  Select a flight:
+      <select [(ngModel)]="booking.flightEntity.id" name="flight">
+          <option value="33">Qatar AirWays</option>
+          <option value="65">Ethihad</option> 
+        </select>
+        <br>
+        Amount:<br>
+        <input type="input" name="amount" [(ngModel)]="booking.totalAmount">
+        <br><br>
+        Select a financialInstrument:
+      <select [(ngModel)]="booking.financialInstrument" name="financialInstrument">
+          <option value="Cash">Cash</option>
+          <option value="Card">Card</option>
+        </select>
+        <br>
+        <input type="date" name="travellingDate" [(ngModel)]="booking.travellingDate">
+<input type="submit" value="Submit" (click)="onSubmit()">
+</form>
