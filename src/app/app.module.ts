@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { FlightsComponent } from './flights/flights.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './user/users.component';
+import { BookingComponent } from './booking/booking.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FlightsComponent,
-    UsersComponent
+    UsersComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,

@@ -14,11 +14,6 @@ export class FlightsComponent implements OnInit {
   constructor(private flightService:FlightService) { }
 
   ngOnInit() {
-    //this.flightService.getFlights().subscribe(
-      //(res) => {
-        //console.log(res)
-        //this.flights = res;
-      //});
       this.getFlight();
   }
 
@@ -36,7 +31,7 @@ export class FlightsComponent implements OnInit {
 
   }
 
-  onsubmit() {
+  onSubmit() {
     this.submitted = true;
     this.save();
   }
